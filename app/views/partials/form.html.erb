@@ -1,0 +1,25 @@
+<form action="/<%= @user.id %>" method="POST">
+  <div>
+    <label>First name</label>
+    <input type="text" name="first_name" placeholder="Enter first name" value="<%= @user.first_name %>">
+  </div>
+  <div>
+    <label>Last name</label>
+    <textarea name="last_name" placeholder="Enter last name"><%= @user.last_name %></textarea>
+  </div>
+  <div>
+    <label>Age</label>
+    <textarea name="age" placeholder="Enter age"><%= @user.age %></textarea>
+  </div>
+  <div>
+    <label>Nationality</label>
+    <textarea name="nationality" placeholder="Enter nationality"><%= @user.nationality %></textarea>
+  </div>
+  <div>
+    <input type="submit" value="Save User">
+  </div>
+  <% if(@user.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+
+</form>

@@ -1,14 +1,19 @@
 class UserController < ApplicationController
   def index
-    @user = 'hello'
+    @title = 'User List'
+    @users= User.each
   end
   def new
-    @id = params[:id].to_i
+    @title = 'New User'
+
   end
   def show
     @id = params[:id].to_i
+    @user = User.find(id)
   end
   def edit
+    @title = 'Edit User'
     @id = params[:id].to_i
+
   end
 end
