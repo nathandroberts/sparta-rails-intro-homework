@@ -1,6 +1,6 @@
 class UserController < ApplicationController
   def index
-
+    @user = 'hello'
   end
   def new
     @id = params[:id].to_i
