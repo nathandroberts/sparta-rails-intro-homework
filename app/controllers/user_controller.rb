@@ -1,10 +1,12 @@
 class UserController < ApplicationController
   def index
     @title = 'User List'
-    @users= User.each
+    # @users= User.each
+    @users = User.all
   end
   def new
     @title = 'New User'
+    # @user = User.new
 
   end
   def show
